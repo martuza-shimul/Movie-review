@@ -1,5 +1,5 @@
 .header {
-	background-color: #f9f9f9;
+	background-color: $primary-200;
 	a {
 		text-decoration: none;
 		color: inherit;
@@ -15,7 +15,11 @@
 		.logo {
 			// border: 1px solid #ccc;
 			font-size: 1.6rem;
-			color: #9300a1;
+			color: $white-200;
+			font-family: $bellota;
+			font-weight: $bold;
+			letter-spacing: 2px;
+			text-transform: uppercase;
 		}
 		.navList {
 			// border: 1px solid #ccc;
@@ -26,7 +30,11 @@
 
 			.navItem {
 				padding: 0.5rem 1rem;
-				color: #015b85;
+				color: $white-300;
+				font-family: $elMessiri;
+				font-weight: $normal;
+				letter-spacing: 2px;
+				text-transform: capitalize;
 			}
 		}
 	}
