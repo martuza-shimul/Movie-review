@@ -4,6 +4,7 @@
 		text-decoration: none;
 		color: inherit;
 	}
+
 	nav {
 		width: 90%;
 		margin: 0 auto;
@@ -16,11 +17,29 @@
 			// border: 1px solid #ccc;
 			font-size: 1.6rem;
 			color: $white-200;
-			font-family: $bellota;
+			font-family: $logo;
 			font-weight: $bold;
-			letter-spacing: 2px;
-			text-transform: uppercase;
+			letter-spacing: 4px;
+			text-transform: capitalize;
 		}
+		.navIcon {
+			border: 2px solid $white-300;
+			padding: 10px;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			cursor: pointer;
+			display: none;
+			p {
+				background: $white-300;
+				width: 20px;
+				height: 3px;
+			}
+		}
+
 		.navList {
 			// border: 1px solid #ccc;
 			display: flex;
@@ -31,10 +50,47 @@
 			.navItem {
 				padding: 0.5rem 1rem;
 				color: $white-300;
-				font-family: $elMessiri;
+				font-family: $header;
 				font-weight: $normal;
 				letter-spacing: 2px;
 				text-transform: capitalize;
+				&.close {
+					display: none;
+				}
+			}
+		}
+		@media screen and (max-width: 450px) {
+			.navIcon {
+				display: flex;
+			}
+			.navList {
+				// border: 1px solid #ccc;
+
+				flex-direction: column;
+				justify-content: center;
+				position: fixed;
+				left: 100%;
+				top: 0;
+				background: $primary-200;
+				width: 100%;
+				height: 100%;
+				transition: left 0.4s ease-in;
+				&.navOpen {
+					left: 0;
+				}
+
+				.navItem {
+					padding: 1rem;
+
+					&.close {
+						display: initial;
+						border: 1px solid $white-300;
+						text-transform: uppercase;
+						padding: 0.5rem 1rem;
+						margin-bottom: 3rem;
+						cursor: pointer;
+					}
+				}
 			}
 		}
 	}

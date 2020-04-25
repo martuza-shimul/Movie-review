@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Bellota|El+Messiri|Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=El+Messiri|Sail|Poppins&display=swap");
+
+// @import url("https://fonts.googleapis.com/css?family=Audiowide|Lobster+Two|Pacifico|Sail|Satisfy&display=swap");
 
 /* HEX */
 $primary-100: #0466c8ff;
@@ -21,6 +23,11 @@ $normal: 500;
 $bold: 700;
 $bolder: 900;
 
-$poppins: "Poppins", sans-serif;
-$bellota: "Bellota", cursive;
-$elMessiri: "El Messiri", sans-serif;
+$content: "Poppins", sans-serif;
+$logo: "Sail", cursive;
+$header: "El Messiri", sans-serif;
+// $bellota: "Bellota", cursive;
+// $satisfy: "Satisfy", cursive;
+// $pacifico: "Pacifico", cursive;
+// $lobster: "Lobster Two", cursive;
+// $audiowide: "Audiowide", cursive;

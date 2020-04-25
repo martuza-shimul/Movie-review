@@ -1,8 +1,33 @@
 footer {
 	background-color: $primary-200;
-	color: $white-300;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
+	color: $light-100;
+	padding: 0.5rem 0;
+	font-family: $header;
+	text-transform: capitalize;
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	.copyright {
+		font-size: 0.85rem;
+		p:last-child {
+			a {
+				color: $white-100;
+			}
+		}
+	}
+	.credit {
+		img {
+			max-width: 100px;
+		}
+	}
 }
