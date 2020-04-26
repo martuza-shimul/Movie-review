@@ -1,7 +1,9 @@
 // import React, { useState, useEffect } from "react";
 import React from "react";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 import Footer from "./components/Footer";
+import img from "./img/dummy.jpg";
 
 // omdb api = "http://www.omdbapi.com/?t=Game+of+Thrones&apikey=a51e37be"
 
@@ -30,9 +32,12 @@ function App() {
 	// 	setImg(posterPath);
 	// };
 
+	//	http:placehold.jp/1600x450.jpg // placeholder image
+
 	return (
 		<div className="">
 			<Header />
+			<Hero hero={"this is hero props"} heroBg={img} />
 			<div className="content"></div>
 			{/* {img.map(img => (
 				<img

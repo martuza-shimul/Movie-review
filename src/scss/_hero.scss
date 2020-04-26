@@ -1,0 +1,30 @@
+.hero {
+	min-height: 450px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	form {
+		background-color: rgba($primary-300, 0.6);
+		padding: 3rem;
+
+		input,
+		button {
+			font-size: 1.4rem;
+			background: $white-200;
+			border: 2px solid $white-200;
+		}
+		input {
+			padding: 1rem;
+			width: 50vw;
+		}
+		button {
+			padding: 1rem 1.5rem;
+			border-left: 1px solid $primary-200;
+			color: $primary-200;
+		}
+	}
+}
