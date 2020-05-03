@@ -18,8 +18,8 @@ footer {
 		color: inherit;
 	}
 	.copyright {
-		font-size: 0.85rem;
-		p:last-child {
+		font-size: $small;
+		p:first-child {
 			a {
 				color: $white-100;
 			}

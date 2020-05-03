@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=El+Messiri|Sail|Poppins&display=swap");
 /* HEX */
 .header {
+  z-index: 10;
   background-color: #0353a4;
 }
 
@@ -34,7 +35,6 @@
 }
 
 .header nav .navIcon {
-  border: 2px solid #f9f9f6;
   padding: 5px;
   width: 40px;
   height: 40px;
@@ -88,6 +88,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .header nav .header {
+    position: relative;
+  }
   .header nav .navIcon {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -109,6 +112,7 @@
     height: 100%;
     -webkit-transition: top 0.4s ease-in;
     transition: top 0.4s ease-in;
+    z-index: 99;
   }
   .header nav .navList.navOpen {
     top: 0;
@@ -118,16 +122,20 @@
   }
   .header nav .navList .navItem.close {
     display: initial;
-    border: 1px solid #f9f9f6;
+    font-size: 2.5rem;
     text-transform: uppercase;
     padding: 0.5rem 1rem;
     margin-bottom: 3rem;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
   }
 }
 
 .hero {
-  min-height: 450px;
+  position: relative;
+  min-height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,14 +145,26 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 62, 125, 0.6)), to(rgba(2, 62, 125, 0.8)));
+  background-image: linear-gradient(rgba(2, 62, 125, 0.6), rgba(2, 62, 125, 0.8));
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 24, 69, 0.6);
 }
 
 .hero form {
-  background-color: rgba(2, 62, 125, 0.6);
-  padding: 3rem;
+  z-index: 5;
 }
 
 .hero form input,
@@ -161,8 +181,36 @@
 
 .hero form button {
   padding: 1rem 1.5rem;
-  border-left: 1px solid #0353a4;
+  border-left: 3px double #0353a4;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   color: #0353a4;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .hero form input,
+  .hero form button {
+    font-size: 1rem;
+  }
+  .hero form input {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero form input,
+  .hero form button {
+    font-size: 0.8rem;
+  }
+  .hero form input {
+    width: 100%;
+  }
+  .hero form button {
+    border-left: none;
+    margin-top: 1rem;
+    width: 100%;
+  }
 }
 
 footer {
@@ -197,10 +245,10 @@ footer a {
 }
 
 footer .copyright {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
-footer .copyright p:last-child a {
+footer .copyright p:first-child a {
   color: #ffffff;
 }
 

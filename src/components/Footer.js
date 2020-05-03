@@ -11,13 +11,11 @@ const Footer = () => {
 							Built with{" "}
 							<span role="img" aria-label="">
 								❤️
-							</span>
-						</p>
-						<p>
-							{" "}
-							© 2020 Lex Go! - Developed by{" "}
+							</span>{" "}
+							Developed by{" "}
 							<a href="https://github.com/martuza-shimul">Martuza</a>
 						</p>
+						<p> © 2020 Lex Go!</p>
 					</div>
 					<div className="credit">
 						<img src={poweredImg} alt="Powered By" />

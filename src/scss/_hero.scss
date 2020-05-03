@@ -1,15 +1,33 @@
 .hero {
-	min-height: 450px;
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($dark, 0.6);
+	}
+	position: relative;
+	min-height: 70vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-image: linear-gradient(
+		rgba($primary-300, 0.6),
+		rgba($primary-300, 0.8)
+	);
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	z-index: 1;
 
 	form {
-		background-color: rgba($primary-300, 0.6);
-		padding: 3rem;
+		// width: 100%;
+		// height: 100%;
+		// background-color: rgba($primary-300, 0.6);
+		// padding: 3rem;
+		z-index: 5;
 
 		input,
 		button {
@@ -23,8 +41,37 @@
 		}
 		button {
 			padding: 1rem 1.5rem;
-			border-left: 1px solid $primary-200;
+			border-left: 3px double $primary-200;
+			font-weight: $bold;
+			letter-spacing: 1.5px;
 			color: $primary-200;
+			cursor: pointer;
+		}
+		@media (max-width: 800px) {
+			// form {
+			// 	margin: 0 5vh;
+			// }
+			input,
+			button {
+				font-size: 1rem;
+			}
+			input {
+				width: 60vw;
+			}
+		}
+		@media (max-width: 550px) {
+			input,
+			button {
+				font-size: 0.8rem;
+			}
+			input {
+				width: 100%;
+			}
+			button {
+				border-left: none;
+				margin-top: 1rem;
+				width: 100%;
+			}
 		}
 	}
 }
