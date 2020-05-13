@@ -1,0 +1,43 @@
+.cardHolder {
+	padding: 5vh;
+	.title {
+		font-size: $large;
+		font-weight: $bold;
+		text-transform: capitalize;
+		letter-spacing: 2.5px;
+		margin-bottom: $medium;
+		// font-family: $header;
+	}
+	.cardWrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: $small;
+	}
+}
+
+.card {
+	background-color: $primary-300;
+	position: relative;
+	figure {
+		position: relative;
+
+		p {
+			background-color: $primary-300;
+			color: $white-300;
+			padding: $small * 0.8 $small;
+			border-radius: 50%;
+			position: absolute;
+			left: 3%;
+			top: 2%;
+		}
+		figcaption {
+			color: $white-300;
+			padding: $small;
+			letter-spacing: 1.5px;
+			text-transform: capitalize;
+		}
+	}
+	img {
+		max-width: 100%;
+	}
+}

@@ -1,22 +1,6 @@
 @import "./vars";
+@import "./global";
 @import "./header";
 @import "./hero";
+@import "./card";
 @import "./footer";
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-body {
-	font-family: $content;
-}
-
-img {
-	width: 100%;
-	height: auto;
-}
-
-.content {
-	min-height: 80vh;
-}

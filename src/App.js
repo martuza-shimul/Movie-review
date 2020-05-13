@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import img from "./img/dummy.jpg";
+import CardHolder from "./components/CardHolder";
 
 // omdb api = "http://www.omdbapi.com/?t=Game+of+Thrones&apikey=a51e37be"
 
@@ -37,8 +38,11 @@ function App() {
 	return (
 		<div className="">
 			<Header />
-			<Hero hero={"this is hero props"} heroBg={img} />
-			<div className="content"></div>
+			<Hero heroBg={img} />
+			<div className="container">
+				<CardHolder title="Popular movies" />
+			</div>
+
 			{/* {img.map(img => (
 				<img
 					src={

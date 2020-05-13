@@ -1,7 +1,7 @@
 import React from "react";
 
-const Hero = ({ hero, heroBg }) => {
-	console.log(hero, heroBg);
+const Hero = ({ heroBg }) => {
+	// console.log(hero, heroBg);
 
 	return (
 		<div
