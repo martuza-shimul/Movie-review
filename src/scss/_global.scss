@@ -7,6 +7,9 @@ body {
 	font-family: $content;
 	font-size: $base;
 	color: $darker;
+	a {
+		text-decoration: none;
+	}
 }
 
 img {

@@ -1,13 +1,17 @@
 import React from "react";
 
-const Card = () => {
+const Card = props => {
+	console.log(props);
+
 	return (
-		<div className="card">
-			<figure>
-				<img src="http://placehold.jp/200x250.jpg" alt="poster" />
-				<p>7.2</p>
-				<figcaption>Extraction</figcaption>
-			</figure>
+		<div className="card" key={props.id}>
+			<a href="#">
+				<figure>
+					<img src={props.img} alt="poster" />
+					<p>{props.rating}</p>
+					<figcaption>{props.name} </figcaption>
+				</figure>
+			</a>
 		</div>
 	);
 };

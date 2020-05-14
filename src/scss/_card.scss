@@ -1,23 +1,87 @@
 .cardHolder {
 	padding: 5vh;
+	position: relative;
 	.title {
 		font-size: $large;
 		font-weight: $bold;
 		text-transform: capitalize;
 		letter-spacing: 2.5px;
 		margin-bottom: $medium;
+
 		// font-family: $header;
 	}
 	.cardWrapper {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-		gap: $small;
+		// background-color: $light-400;
+		display: flex;
+		// justify-content: space-evenly;
+		// display: grid;
+		// grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		// gap: $small;
+		overflow-x: scroll !important;
+
+		scroll-behavior: smooth;
+		transition: 0.3s ease-in-out;
+
+		&::-webkit-scrollbar {
+			// display: none;
+			height: 10px;
+			border-radius: 10px;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+			border: 0.5px solid $primary-200;
+			border-radius: 10px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $primary-300;
+			border-radius: 10px;
+		}
+
+		.next,
+		.prev {
+			position: absolute;
+			top: 50%;
+			background-color: transparentize($primary-300, 0.3);
+			transform: translateY(50%);
+			cursor: pointer;
+			padding: $small * 0.4;
+			z-index: 5;
+			width: $large;
+			height: $medium * 1.2;
+		}
+		.next {
+			right: 10px;
+			clip-path: polygon(
+				0% 20%,
+				60% 20%,
+				60% 0%,
+				100% 50%,
+				60% 100%,
+				60% 80%,
+				0% 80%
+			);
+		}
+		.prev {
+			left: 10px;
+			clip-path: polygon(
+				40% 0%,
+				40% 20%,
+				100% 20%,
+				100% 80%,
+				40% 80%,
+				40% 100%,
+				0% 50%
+			);
+		}
 	}
 }
 
 .card {
 	background-color: $primary-300;
 	position: relative;
+	min-width: 200px;
+	margin: 0 $small $medium 0;
+
 	figure {
 		position: relative;
 
@@ -32,7 +96,7 @@
 		}
 		figcaption {
 			color: $white-300;
-			padding: $small;
+			padding: 0 $small * 0.4 $small * 0.4 $small * 0.8;
 			letter-spacing: 1.5px;
 			text-transform: capitalize;
 		}
