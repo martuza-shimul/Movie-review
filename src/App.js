@@ -33,7 +33,7 @@ function App() {
 	// 	setImg(posterPath);
 	// };
 
-	//	http:placehold.jp/1600x450.jpg // placeholder image
+	//	http://placehold.jp/1600x450.jpg // placeholder image
 
 	return (
 		<div className="">

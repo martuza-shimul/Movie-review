@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Card from "./Card";
 
 const CardHolder = ({ title }) => {
@@ -76,17 +76,23 @@ const CardHolder = ({ title }) => {
 			rating: 8.2,
 		},
 	];
-	function prev() {
-		document.getElementById("cardContainer").scrollLeft -= 200;
+	const [arrow, setArrow] = useState(0);
+	const scroller = useRef(null);
+
+	//document.getElementById("cardContainer").scrollLeft -= 200;
+
+	if (arrow === 1) {
+		scroller.current.scrollLeft += 200;
+		setArrow(0);
+	} else if (arrow === -1) {
+		scroller.current.scrollLeft -= 200;
+		setArrow(0);
 	}
 
-	function next() {
-		document.getElementById("cardContainer").scrollLeft += 200;
-	}
 	return (
 		<div className="cardHolder">
 			<h3 className="title"> {title} </h3>
-			<div className="cardWrapper" id="cardContainer">
+			<div className="cardWrapper" id="cardContainer" ref={scroller}>
 				{card.length === 0 ? (
 					<h4>No Value</h4>
 				) : (
@@ -99,11 +105,8 @@ const CardHolder = ({ title }) => {
 						/>
 					))
 				)}
-
-				<div className="next" onClick={next}></div>
-				<div className="prev" onClick={prev}>
-					{" "}
-				</div>
+				<div className="next" onClick={() => setArrow(1)}></div>
+				<div className="prev" onClick={() => setArrow(-1)}></div>
 			</div>
 		</div>
 	);

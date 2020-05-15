@@ -341,6 +341,10 @@ img {
   max-width: 100%;
 }
 
+.cardContainer {
+  overflow-x: hidden;
+}
+
 footer {
   background-color: #0353a4;
   color: #979dac;
