@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "@reach/router";
 
 const Header = () => {
 	const [navOpen, setNavOpen] = useState(false);
@@ -9,7 +10,7 @@ const Header = () => {
 				<nav>
 					<div className="logo">
 						<h5>
-							<a href="/">lex Go!</a>
+							<Link to="/">lex Go!</Link>
 						</h5>
 					</div>
 					<div className="navIcon" onClick={handleNav}>
@@ -22,13 +23,13 @@ const Header = () => {
 							<a href="/#">X</a>
 						</li>
 						<li className="navItem">
-							<a href="/movie">Movie</a>
+							<Link to="/">Movie</Link>
 						</li>
 						<li className="navItem">
-							<a href="/tv-series">TV Series</a>
+							<Link to="/tv">TV Series</Link>
 						</li>
 						<li className="navItem">
-							<a href="/person">Person</a>
+							<Link to="/person">Person</Link>
 						</li>
 					</ul>
 				</nav>

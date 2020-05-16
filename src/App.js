@@ -1,8 +1,6 @@
 // import React, { useState, useEffect } from "react";
 import React from "react";
-import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Footer from "./components/Footer";
 import img from "./img/dummy.jpg";
 import CardHolder from "./components/CardHolder";
 
@@ -37,10 +35,12 @@ function App() {
 
 	return (
 		<div className="">
-			<Header />
 			<Hero heroBg={img} />
 			<div className="container">
-				<CardHolder title="Popular movies" />
+				<CardHolder title="Popular " />
+				<CardHolder title="Trending " />
+				<CardHolder title="Top Rated " />
+				<CardHolder title="Upcoming " />
 			</div>
 
 			{/* {img.map(img => (
@@ -53,7 +53,6 @@ function App() {
 					alt="Movie Poster"
 				/>
 			))} */}
-			<Footer />
 		</div>
 	);
 }

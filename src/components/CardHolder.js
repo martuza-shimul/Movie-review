@@ -98,6 +98,7 @@ const CardHolder = ({ title }) => {
 				) : (
 					card.map(value => (
 						<Card
+							id={value.id}
 							key={value.id}
 							name={value.name}
 							img={value.image}
