@@ -8,6 +8,17 @@ const CardHolder = ({ title }) => {
 			name: "Extraction",
 			image: "http://placehold.jp/200x250.jpg",
 			rating: 7.2,
+			info: {
+				plot:
+					"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+				releaseDate: "12/4/2020",
+				genre: "Action, Thriller",
+				language: "English",
+				budget: "2.5m",
+				revenue: "6.5m",
+				directior: "Sam",
+				story: "Andy",
+			},
 		},
 		{
 			id: 2,
@@ -76,6 +87,7 @@ const CardHolder = ({ title }) => {
 			rating: 8.2,
 		},
 	];
+
 	const [arrow, setArrow] = useState(0);
 	const scroller = useRef(null);
 

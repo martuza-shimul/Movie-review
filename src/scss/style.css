@@ -350,6 +350,103 @@ img {
   overflow-x: hidden;
 }
 
+.detailsWrapper .heroBlock {
+  position: relative;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+}
+
+.detailsWrapper .heroBlock::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 18, 51, 0.82);
+}
+
+.detailsWrapper .heroBlock .imgHolder {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  z-index: 5;
+}
+
+.detailsWrapper .heroBlock .contentHolder {
+  z-index: 5;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  color: #f2f2f2;
+}
+
+.detailsWrapper .heroBlock .contentHolder .title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 3.5px;
+  line-height: 1.6;
+}
+
+.detailsWrapper .heroBlock .contentHolder .genre {
+  font-weight: normal;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+}
+
+.detailsWrapper .heroBlock .contentHolder .helper {
+  font-size: 0.8rem;
+}
+
+.detailsWrapper .heroBlock .contentHolder .helper .release {
+  margin-right: 0.8rem;
+}
+
+.detailsWrapper .heroBlock .contentHolder .plot {
+  margin-top: 0.8rem;
+}
+
+.detailsWrapper .heroBlock .contentHolder .makers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.5rem;
+}
+
+.detailsWrapper .heroBlock .contentHolder .makers .rating,
+.detailsWrapper .heroBlock .contentHolder .makers .director,
+.detailsWrapper .heroBlock .contentHolder .makers .story {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.detailsWrapper .extraInfo {
+  padding: 1.5% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #f2f2f2;
+  background-color: #001233;
+}
+
 footer {
   background-color: #0353a4;
   color: #979dac;
