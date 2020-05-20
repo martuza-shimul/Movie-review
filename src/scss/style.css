@@ -15,6 +15,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   color: #001233;
+  letter-spacing: 1px;
 }
 
 body a {
@@ -374,7 +375,7 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 18, 51, 0.82);
+  background-color: rgba(0, 18, 51, 0.88);
 }
 
 .detailsWrapper .heroBlock .imgHolder {
@@ -395,24 +396,33 @@ img {
   font-weight: 900;
   letter-spacing: 3.5px;
   line-height: 1.6;
+  font-family: "El Messiri", sans-serif;
 }
 
 .detailsWrapper .heroBlock .contentHolder .genre {
   font-weight: normal;
   font-size: 1.2rem;
   letter-spacing: 1.5px;
+  margin-bottom: 0.4rem;
 }
 
 .detailsWrapper .heroBlock .contentHolder .helper {
   font-size: 0.8rem;
 }
 
-.detailsWrapper .heroBlock .contentHolder .helper .release {
+.detailsWrapper .heroBlock .contentHolder .helper .release,
+.detailsWrapper .heroBlock .contentHolder .helper .lang {
   margin-right: 0.8rem;
 }
 
+.detailsWrapper .heroBlock .contentHolder .helper .release span,
+.detailsWrapper .heroBlock .contentHolder .helper .lang span {
+  border: 0.5px solid #ffffff;
+  padding: 0 5px;
+}
+
 .detailsWrapper .heroBlock .contentHolder .plot {
-  margin-top: 0.8rem;
+  margin: 2.5rem 0;
 }
 
 .detailsWrapper .heroBlock .contentHolder .makers {
@@ -425,7 +435,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2.5rem;
 }
 
 .detailsWrapper .heroBlock .contentHolder .makers .rating,
@@ -433,6 +442,13 @@ img {
 .detailsWrapper .heroBlock .contentHolder .makers .story {
   font-weight: 500;
   letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+
+.detailsWrapper .heroBlock .contentHolder .makers .rating p,
+.detailsWrapper .heroBlock .contentHolder .makers .director p,
+.detailsWrapper .heroBlock .contentHolder .makers .story p {
+  font-family: "El Messiri", sans-serif;
 }
 
 .detailsWrapper .extraInfo {
@@ -445,6 +461,15 @@ img {
           justify-content: space-between;
   color: #f2f2f2;
   background-color: #001233;
+}
+
+.detailsWrapper .extraInfo .info .title {
+  font-size: 1.2rem;
+  font-family: "El Messiri", sans-serif;
+}
+
+.detailsWrapper .extraInfo .info p {
+  letter-spacing: 2px;
 }
 
 footer {

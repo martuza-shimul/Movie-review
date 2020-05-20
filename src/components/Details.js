@@ -18,8 +18,12 @@ const Details = () => {
 					<h1 className="title">Extraction</h1>
 					<h4 className="genre">Drama, Action, Thriller</h4>
 					<p className="helper">
-						<span className="release">14th April 2020</span>
-						<span className="lang">English</span>
+						<span className="release">
+							<span>R</span> 14th April 2020
+						</span>
+						<span className="lang">
+							<span>Ln</span> English
+						</span>
 					</p>
 
 					<p className="plot">
@@ -30,15 +34,15 @@ const Details = () => {
 					<div className="makers">
 						<h3 className="rating">
 							<p>Rating</p>
-							<p>8.3</p>
+							8.3
 						</h3>
 						<h3 className="director">
 							<p>Director</p>
-							<p>Sam Hargrave</p>
+							Sam Hargrave
 						</h3>
 						<h3 className="story">
 							<p>Story</p>
-							<p>Anthony Russo</p>
+							Anthony Russo
 						</h3>
 					</div>
 				</div>
