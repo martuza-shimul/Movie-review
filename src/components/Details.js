@@ -2,7 +2,8 @@ import React from "react";
 import img from "../img/extraction.jpg";
 import heroBG from "../img/dummy.jpg";
 
-const Details = () => {
+const Details = props => {
+	console.log(props);
 	return (
 		<div className="detailsWrapper">
 			<div
