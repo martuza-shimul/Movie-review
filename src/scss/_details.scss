@@ -104,4 +104,27 @@
 			}
 		}
 	}
+	.actors {
+		// display: flex;
+		padding: 5vh 5%;
+		.cards {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: $small;
+		}
+		h3 {
+			font-size: $large;
+			margin-bottom: $large;
+		}
+		.card {
+			figcaption {
+				span:last-child {
+					font-size: $small;
+				}
+				span {
+					display: block;
+				}
+			}
+		}
+	}
 }

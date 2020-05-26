@@ -505,6 +505,31 @@ img {
   letter-spacing: 2px;
 }
 
+.detailsWrapper .actors {
+  padding: 5vh 5%;
+}
+
+.detailsWrapper .actors .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+
+.detailsWrapper .actors h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.detailsWrapper .actors .card figcaption span:last-child {
+  font-size: 0.8rem;
+}
+
+.detailsWrapper .actors .card figcaption span {
+  display: block;
+}
+
 footer {
   background-color: #0353a4;
   color: #979dac;

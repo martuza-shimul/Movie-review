@@ -1,5 +1,6 @@
 import React from "react";
-import img from "../img/extraction.jpg";
+import ActorCard from "./ActorCard";
+// import img from "../img/extraction.jpg";
 
 const Details = props => {
 	const data = props.data;
@@ -70,6 +71,18 @@ const Details = props => {
 				<div className="info">
 					<p className="title">Revenue</p>
 					<p>${details.info.revenue}</p>
+				</div>
+			</div>
+			<div className="actors">
+				<h3>Actors</h3>
+				<div className="cards">
+					<ActorCard />
+					<ActorCard />
+					<ActorCard />
+					<ActorCard />
+					<ActorCard />
+					<ActorCard />
+					<ActorCard />
 				</div>
 			</div>
 		</div>

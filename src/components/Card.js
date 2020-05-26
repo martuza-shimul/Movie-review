@@ -7,7 +7,7 @@ const Card = props => {
 	return (
 		<div className="card">
 			<Link to={`/details/${props.id}`}>
-				<figure info={props.info}>
+				<figure>
 					<img src={props.img} alt="poster" />
 					<p>{props.rating}</p>
 					<figcaption>{props.name} </figcaption>
