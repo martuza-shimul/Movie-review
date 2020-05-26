@@ -1,49 +1,59 @@
 import React from "react";
 import img from "../img/extraction.jpg";
-import heroBG from "../img/dummy.jpg";
 
 const Details = props => {
-	console.log(props);
+	const data = props.data;
+	var details;
+	for (let i = 0; i < data.length; i++) {
+		// eslint-disable-next-line no-loop-func
+		data[i].cardInfo.map(value => {
+			// eslint-disable-next-line eqeqeq
+			if (props.id == value.id) {
+				console.log("id found", value.id);
+				return (details = value);
+			}
+			// eslint-disable-next-line array-callback-return
+			return;
+		});
+	}
+	console.log(details);
+
 	return (
 		<div className="detailsWrapper">
 			<div
 				className="heroBlock"
 				style={{
-					backgroundImage: `url(${heroBG})`,
+					backgroundImage: `url(${details.hero})`,
 				}}
 			>
 				<div className="imgHolder">
-					<img src={img} alt="poster thumbnails" />
+					<img src={details.image} alt="poster thumbnails" />
 				</div>
 				<div className="contentHolder">
-					<h1 className="title">Extraction</h1>
-					<h4 className="genre">Drama, Action, Thriller</h4>
+					<h1 className="title">{details.name} </h1>
+					<h4 className="genre">{details.info.genre} </h4>
 					<p className="helper">
 						<span className="release">
-							<span>R</span> 14th April 2020
+							<span>R</span> {details.info.releaseDate}
 						</span>
 						<span className="lang">
-							<span>Ln</span> English
+							<span>Ln</span> {details.info.language}
 						</span>
 					</p>
 
-					<p className="plot">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
-						corrupti mollitia error ipsam iusto, fugiat alias repudiandae facere
-						voluptate doloremque!
-					</p>
+					<p className="plot">{details.info.plot}</p>
 					<div className="makers">
 						<h3 className="rating">
 							<p>Rating</p>
-							8.3
+							{details.rating}
 						</h3>
 						<h3 className="director">
 							<p>Director</p>
-							Sam Hargrave
+							{details.info.director}
 						</h3>
 						<h3 className="story">
 							<p>Story</p>
-							Anthony Russo
+							{details.info.story}
 						</h3>
 					</div>
 				</div>
@@ -51,15 +61,15 @@ const Details = props => {
 			<div className="extraInfo">
 				<div className="info">
 					<p className="title">Run Time</p>
-					<p>1h 56m</p>
+					<p>{details.info.runTime}</p>
 				</div>
 				<div className="info">
 					<p className="title">Budget</p>
-					<p>$87,500,000</p>
+					<p>${details.info.budget}</p>
 				</div>
 				<div className="info">
 					<p className="title">Revenue</p>
-					<p>$12,87,500,000</p>
+					<p>${details.info.revenue}</p>
 				</div>
 			</div>
 		</div>

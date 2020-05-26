@@ -397,6 +397,7 @@ img {
   letter-spacing: 3.5px;
   line-height: 1.6;
   font-family: "El Messiri", sans-serif;
+  text-transform: capitalize;
 }
 
 .detailsWrapper .heroBlock .contentHolder .genre {
@@ -419,6 +420,7 @@ img {
 .detailsWrapper .heroBlock .contentHolder .helper .lang span {
   border: 0.5px solid #ffffff;
   padding: 0 5px;
+  margin-right: 5px;
 }
 
 .detailsWrapper .heroBlock .contentHolder .plot {
@@ -437,9 +439,22 @@ img {
           align-items: center;
 }
 
+@media (max-width: 767px) {
+  .detailsWrapper .heroBlock .contentHolder .makers {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .detailsWrapper .heroBlock .contentHolder .makers .rating,
 .detailsWrapper .heroBlock .contentHolder .makers .director,
 .detailsWrapper .heroBlock .contentHolder .makers .story {
+  margin-bottom: 0.4rem;
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 1.2rem;
@@ -448,7 +463,7 @@ img {
 .detailsWrapper .heroBlock .contentHolder .makers .rating p,
 .detailsWrapper .heroBlock .contentHolder .makers .director p,
 .detailsWrapper .heroBlock .contentHolder .makers .story p {
-  font-family: "El Messiri", sans-serif;
+  font-size: 1.05rem;
 }
 
 .detailsWrapper .extraInfo {
@@ -463,9 +478,27 @@ img {
   background-color: #001233;
 }
 
+@media (max-width: 500px) {
+  .detailsWrapper .extraInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .detailsWrapper .extraInfo .info {
+    margin-bottom: 0.4rem;
+  }
+}
+
 .detailsWrapper .extraInfo .info .title {
-  font-size: 1.2rem;
-  font-family: "El Messiri", sans-serif;
+  font-size: 1.05rem;
 }
 
 .detailsWrapper .extraInfo .info p {
